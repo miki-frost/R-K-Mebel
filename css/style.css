@@ -87,30 +87,37 @@ span {
 @media (min-width: 768px) {
   .layout {
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 3fr auto;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas:
       "header header "
       "section main "
       "footer footer ";
+  }
 
-    ul {
-      flex-wrap: nowrap;
+  ul {
+    flex-wrap: nowrap;
+  }
+  li:hover {
+    background-color: #db3632;
+  }
+  section > ul > li:hover {
+    background-color: transparent;
+  }
+  a:hover {
+    span {
+      color: black;
     }
-    li:hover {
-      background-color: #db3632;
-    }
-    section > ul > li:hover {
-      background-color: transparent;
-    }
-    a:hover {
-      span {
-        color: black;
-      }
-      color: white;
-    }
-
-    .header {
-      flex-direction: row;
-    }
+    color: white;
+  }
+  .section > ul {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+  }
+  .header {
+    flex-direction: row;
+  }
+  .section > ul > li {
+    font-size: 2em;
   }
 }
