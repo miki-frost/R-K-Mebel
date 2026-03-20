@@ -8,12 +8,13 @@ body {
   margin: 0;
   font-family: system-ui, sans-serif;
 }
+/* ------------------------------------------------------------ */
 
 /* Mobile First */
 .layout {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 55vh 15vh 25vh 5vh;
+  grid-template-rows: auto 1fr auto;
   grid-template-areas:
     "header"
     "section"
@@ -27,9 +28,10 @@ body {
   flex-direction: column;
   display: flex;
   align-items: center;
-  border: 1px black solid;
   width: 100%;
+  border-bottom: 2px solid black;
 }
+
 nav {
   width: 100%;
 }
@@ -67,21 +69,64 @@ span {
 /* Sekcja */
 .section {
   grid-area: section;
-  border: 1px black solid;
+  z-index: 1;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section > ul {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.369);
+  color: white;
+}
+
+.section > ul > li {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  width: 100%;
+  height: 3em;
+  line-height: 3em;
 }
 
 /* Treść główna */
 .main {
+  background-color: #23211B;
   grid-area: main;
-  border: 1px black solid;
+  grid-row: 2/3;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 /* Stopka */
 .footer {
   grid-area: footer;
   text-align: center;
-  border: 1px black solid;
+  border-top: 2px solid black;
+  background-color: #23211B;
+  color: white;
 }
+.footer > ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  padding: 0;
+  margin: 0;
+}
+.footer > ul > li > a {
+  font-size: 0.5em;
+  color: white;
+}
+
+/* ------------------------------------------------------------ */
 
 /* Desktop */
 @media (min-width: 768px) {
@@ -97,27 +142,50 @@ span {
   ul {
     flex-wrap: nowrap;
   }
-  li:hover {
-    background-color: #db3632;
+
+  /* Header */
+  .header {
+    flex-direction: row;
   }
-  section > ul > li:hover {
-    background-color: transparent;
-  }
+
+
+  /* Dowcip po najechaniu myszką na link/span */
   a:hover {
     span {
       color: black;
     }
     color: white;
   }
+  
+  /* Sekcja */
   .section > ul {
     flex-direction: column;
     align-items: flex-start;
     height: 100%;
+    background-color: #23211B;
   }
-  .header {
-    flex-direction: row;
-  }
-  .section > ul > li {
+   .section > ul > li {
     font-size: 2em;
+        transition: 0.6s;
+
   }
+  /* Kolor po najechaniu myszką na nawigacji */
+  .header > nav > ul > li:hover {
+    background-color: #db3632;
+  }
+  section > ul > li:hover {
+
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+ /*Footer*/
+ .footer {
+  background-color: transparent;
+  color: black;
+ }
+  .footer > ul > li > a {
+    color: black;
+  }
+    
 }

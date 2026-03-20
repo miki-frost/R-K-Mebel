@@ -26,7 +26,6 @@ body {
   flex-direction: column;
   display: flex;
   align-items: center;
-  border: 1px black solid;
   width: 100%;
 }
 nav {
@@ -66,14 +65,12 @@ span {
 /* Treść główna */
 .main {
   grid-area: main;
-  border: 1px black solid;
 }
 
 /* Stopka */
 .footer {
   grid-area: footer;
   text-align: center;
-  border: 1px black solid;
 }
 
 /* Desktop */
