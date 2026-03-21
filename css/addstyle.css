@@ -8,12 +8,13 @@ body {
   margin: 0;
   font-family: system-ui, sans-serif;
 }
+/* ------------------------------------------------------------ */
 
 /* Mobile First */
 .layout {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 3fr auto;
+  grid-template-rows: auto 1fr auto;
   grid-template-areas:
     "header"
     "main"
@@ -27,7 +28,9 @@ body {
   display: flex;
   align-items: center;
   width: 100%;
+  border-bottom: 2px solid black;
 }
+
 nav {
   width: 100%;
 }
@@ -64,40 +67,125 @@ span {
 
 /* Treść główna */
 .main {
+  display: flex;
+  flex-direction: column;
+  background-color: #23211B;
+  color: white;
   grid-area: main;
+  grid-row: 2/3;
+  z-index: 0;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.main > p{
+  padding: 0 20px;
 }
 
 /* Stopka */
 .footer {
   grid-area: footer;
   text-align: center;
+  border-top: 2px solid black;
+  background-color: #23211B;
+  color: white;
+  padding-top: 10px;
 }
+.footer > ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 15px;
+}
+.footer > ul > li > a {
+  font-size: 0.5em;
+  color: white;
+}
+
+/* ------------------------------------------------------------ */
 
 /* Desktop */
 @media (min-width: 768px) {
   .layout {
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 4fr auto;
+    grid-template-rows: 25vh 68vh 7vh;
     grid-template-areas:
       "header header "
-      "main main"
+      "main main "
       "footer footer ";
-
-    ul {
-      flex-wrap: nowrap;
-    }
-    li:hover {
-      background-color: #db3632;
-    }
-    a:hover {
-      span {
-        color: black;
-      }
-      color: white;
-    }
-
-    .header {
-      flex-direction: row;
-    }
   }
+
+  ul {
+    flex-wrap: nowrap;
+  }
+
+  /* Header */
+  .header {
+    flex-direction: row;
+  }
+    .header > nav > ul > li > a{
+      transition: 0.3s;
+    }
+
+  .header > nav > ul > li > a:hover {
+    background-color: #db3632;
+  }
+
+  /* Dowcip po najechaniu myszką na link/span */
+  a:hover {
+    span {
+      color: black;
+    }
+    color: white;
+  }
+  
+  /* Sekcja */
+  .section > ul {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    background-color: #23211B;
+  }
+   .section > ul > li {
+    font-size: 1.5em;
+    transition: 0.5s;
+  }
+
+  section > ul > li:hover {
+    font-size: 1.6em;
+    cursor: default;
+  }
+
+ /*Footer*/
+ .footer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: transparent;
+  color: black;
+  justify-content: space-around;
+ }
+
+ .footer > ul {
+  flex-wrap: wrap;
+  width: 30%;
+}
+
+.footer > iframe{
+  width: 30%;
+}
+.social{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+  .footer > ul > li > a {
+    color: black;
+  }
+    .footer > p{
+    width: 100%;
+    }
 }
