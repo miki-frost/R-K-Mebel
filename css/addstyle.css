@@ -69,7 +69,7 @@ span {
 .main {
   display: flex;
   flex-direction: column;
-  background-color: #23211B;
+  background-color: #23211b;
   color: white;
   grid-area: main;
   grid-row: 2/3;
@@ -79,7 +79,7 @@ span {
   overflow: hidden;
 }
 
-.main > p{
+.main > p {
   padding: 0 20px;
 }
 
@@ -88,7 +88,7 @@ span {
   grid-area: footer;
   text-align: center;
   border-top: 2px solid black;
-  background-color: #23211B;
+  background-color: #23211b;
   color: white;
   padding-top: 10px;
 }
@@ -101,8 +101,17 @@ span {
   padding-bottom: 15px;
 }
 .footer > ul > li > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 0.5em;
   color: white;
+  height: 100%;
+  width: 40%;
+}
+
+.footer > ul > li > a > img {
+  margin-right: 5px;
 }
 
 /* ------------------------------------------------------------ */
@@ -126,9 +135,9 @@ span {
   .header {
     flex-direction: row;
   }
-    .header > nav > ul > li > a{
-      transition: 0.3s;
-    }
+  .header > nav > ul > li > a {
+    transition: 0.3s;
+  }
 
   .header > nav > ul > li > a:hover {
     background-color: #db3632;
@@ -141,15 +150,15 @@ span {
     }
     color: white;
   }
-  
+
   /* Sekcja */
   .section > ul {
     flex-direction: column;
     align-items: flex-start;
     height: 100%;
-    background-color: #23211B;
+    background-color: #23211b;
   }
-   .section > ul > li {
+  .section > ul > li {
     font-size: 1.5em;
     transition: 0.5s;
   }
@@ -159,33 +168,34 @@ span {
     cursor: default;
   }
 
- /*Footer*/
- .footer {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: transparent;
-  color: black;
-  justify-content: space-around;
- }
+  /*Footer*/
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: transparent;
+    color: black;
+    justify-content: space-around;
+  }
 
- .footer > ul {
-  flex-wrap: wrap;
-  width: 30%;
-}
+  .footer > ul {
+    flex-wrap: wrap;
+    width: 30%;
+    padding-bottom: 0;
+  }
 
-.footer > iframe{
-  width: 30%;
-}
-.social{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
+  .footer > iframe {
+    width: 30%;
+  }
+  .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
   .footer > ul > li > a {
     color: black;
   }
-    .footer > p{
+  .footer > p {
     width: 100%;
-    }
+  }
 }
