@@ -131,10 +131,10 @@ span {
   font-size: 0.5em;
   color: white;
   height: 100%;
-  width: 40%;
 }
 
 .footer > ul > li > a > img {
+  background-color: white;
   margin-right: 5px;
 }
 
@@ -217,9 +217,7 @@ span {
     width: 100%;
   }
   .footer > ul > li > a {
+    width: 50%;
     color: black;
-  }
-  .footer > p {
-    width: 100%;
   }
 }

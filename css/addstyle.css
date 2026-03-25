@@ -107,10 +107,10 @@ span {
   font-size: 0.5em;
   color: white;
   height: 100%;
-  width: 40%;
 }
 
 .footer > ul > li > a > img {
+  background-color: white;
   margin-right: 5px;
 }
 
