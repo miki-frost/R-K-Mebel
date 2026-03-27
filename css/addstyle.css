@@ -87,16 +87,19 @@ span {
 
 .slider {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
-  flex-wrap: wrap;
 }
 
-.slider > img {
+.slider-container > img {
   padding: 5px;
-  height: 100px;
+  height: 17em;
+  display: none;
+}
+
+img.active {
+  display: block;
 }
 
 /* Stopka */
