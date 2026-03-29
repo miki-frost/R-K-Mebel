@@ -80,9 +80,23 @@ span {
 }
 
 .main > p {
+  font-size: 1.2em;
   padding: 0 20px;
 }
 
+main > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
+.main > a > img {
+  background-color: white;
+  margin-right: 10px;
+}
 /* Sekcja z galerią zdjęć */
 
 .slider {
