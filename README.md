@@ -12,7 +12,9 @@ Strona tworzona klasycznie w HTML i CSS, bez frameworków i bibliotek JS.
 - prezentacja usług stolarni meblowej
 - pokazanie wybranych realizacji
 - ułatwienie kontaktu z klientem
-- nauka i utrwalenie podstaw HTML, CSS oraz responsywności
+- utrwalenie podstaw HTML, CSS oraz responsywności
+- podstawy SEO
+- nauka JavaScipt w praktyce
 
 ---
 
@@ -23,17 +25,6 @@ Strona tworzona klasycznie w HTML i CSS, bez frameworków i bibliotek JS.
 - **JavaScript** (opcjonalnie) – proste interakcje (np. menu mobilne)
 
 Brak frameworków – projekt oparty na czystych technologiach webowych.
-
----
-
-## 📂 Struktura projektu
-/index.html – strona główna
-/uslugi.html – oferta usług
-/galeria.html – galeria realizacji
-/kontakt.html – dane kontaktowe
-/css/style.css – główny plik stylów
-/img/ – zdjęcia i grafiki
-
 
 ---
 
